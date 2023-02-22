@@ -5,17 +5,15 @@ using namespace std;
 void menu();
 int main(void)
 {
-    
     menu();
-   
     scanf("");
     return(0);
 }
 void  menu ()
 {
 
-	string nit,nombre,apellido,direccion,fechan,pe;
-	int telefono,c;
+	string nit,nombre,apellidos,direccion,fecha_nacimiento,codemp,psto;
+	int telefono;
 	int opcion;
 	do{
   
@@ -25,7 +23,7 @@ void  menu ()
     cout <<"3 Leer cliente"<<endl;
     cout <<"4 Leer empleado"<<endl;
 	cout <<"5 Actualizar cliente"<<endl;
-	cout <<"6 Actualizar cliente"<<endl;
+	cout <<"6 Actualizar empleado"<<endl;
     cout <<"7 Eliminar"<<endl;
     
     cin >> opcion;
@@ -38,46 +36,59 @@ void  menu ()
 	cin >> nit ;
 	cout << "\nIngrese Nombres: "<<endl;
 	cin >> nombre;
-	cout << "Ingrese Apellidos: "<<endl;
-	cin >> apellido;
-	cout << "Ingrese Direccion: "<<endl;
+	cout << "\nIngrese Apellidos: "<<endl;
+	cin >> apellidos;
+	cout << "\nIngrese Direccion: "<<endl;
 	cin >> direccion;
-	cout << "Ingrese Telefono: "<<endl;
+	cout << "\nIngrese Telefono: "<<endl;
 	cin >> telefono;
-	cout << "Ingrese Fecha nacimiento: "<<endl;
-	cin >> fechan;
+	cout << "\nIngrese Fecha nacimiento: "<<endl;
+	cin >> fecha_nacimiento;
 	system("pause");
     break;
  case 2: cout<<"Usted a seleccionado la opcion de Crear Empleado"<<endl;
-	cout << "Ingrese Nombres: "<<endl;
+	cout << "\nIngrese Nombres: "<<endl;
 	cin >> nombre;
-	cout << "Ingrese Apellidos: "<<endl;
-	cin >> apellido;
-	cout << "Ingrese Direccion: "<<endl;
+	cout << "\nIngrese Apellidos: "<<endl;
+	cin >> apellidos;
+	cout << "\nIngrese Direccion: "<<endl;
 	cin >> direccion;
-	cout << "Ingrese Telefono: "<<endl;
+	cout << "\nIngrese Telefono: "<<endl;
 	cin >> telefono;
-	cout << "Ingrese Fecha nacimiento: "<<endl;
-	cin >> fechan;
-	cout << "Ingrese el codigo de empleado" <<endl;
-	cin >> c;
-	cout << "Ingrese el puesto de empleado" <<endl;
-	cin >> pe;
+	cout << "\nIngrese Fecha nacimiento: "<<endl;
+	cin >> fecha_nacimiento;
+	cout << "\nIngrese el codigo de empleado" <<endl;
+	cin >> codemp;
+	cout << "\nIngrese el puesto de empleado" <<endl;
+	cin >> psto;
 	system("pause");
  break;
    
    case 3: 
-   cliente c = 	cliente(nombre, apellido,  direccion, telefono,  fechan,nit);
-	c.mostrar();
+   c : Cliente(nombre, apellidos,  direccion, telefono, fecha_nacimiento,nit);
+	Cliente :: mostrar();
 	system("pause");
 break;
 	
 	case 4: 
-  empleado e = 	empleado(nombre, apellido,  direccion, telefono,  fechan,pe,c);
-	c.mostrar();
+  e : Empleado(nombre, apellidos,  direccion, telefono,  fecha_nacimiento,codemp,psto);
+	Empleado :: mostrar();
 	system("pause");
 break;
      
+     case 5:
+     	c : Cliente(nombre,apellidos,direccion,telefono,fecha_nacimiento,nit);
+     	Cliente :: mostrar ();
+     system("pause");
+break;
+	 case 6:
+     	e : Empleado(nombre,apellidos,direccion,telefono,fecha_nacimiento,codemp,psto);
+     	Empleado :: mostrar ();
+     system("pause");
+break;
+
+      case 7:
+      	delete;
    }
     
 system("cls");
